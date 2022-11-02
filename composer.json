@@ -1,0 +1,49 @@
+{
+  "name": "khangrey/qazhboard-components",
+  "description": "Form fields for the Laravel framework.",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "role": "Developer",
+      "name": "Daulerkerey Dulat",
+      "email": "khan.grey.dev@gmail.com",
+      "homepage": "https://github.com/khangrey"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Khangrey\\QazhboardComponents\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Khangrey\\QazhboardComponents\\Tests\\": "tests/"
+    }
+  },
+  "require": {
+    "php": "^8.1",
+    "ext-json": "*",
+    "illuminate/filesystem": "^7.0|^8.0|^9.0",
+    "illuminate/support": "^7.0|^8.0|^9.0",
+    "illuminate/view": "^7.0|^8.0|^9.0",
+    "nesbot/carbon": "^2.38"
+  },
+  "require-dev": {
+    "gajus/dindent": "^2.0",
+    "guzzlehttp/guzzle": "^7.4",
+    "orchestra/testbench": "^7.11",
+    "pestphp/pest": "^1.22",
+    "phpstan/phpstan": "^1.8"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "config": {
+    "sort-packages": true,
+    "preferred-install": "dist",
+    "optimize-autoloader": true,
+    "allow-plugins": {
+      "pestphp/pest-plugin": true
+    }
+  }
+}

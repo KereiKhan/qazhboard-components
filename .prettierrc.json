@@ -1,0 +1,15 @@
+{
+  "trailingComma": "es5",
+  "tabWidth": 4,
+  "singleQuote": true,
+  "trailingCommaPHP": false,
+  "overrides": [
+    {
+      "files": ["*.blade.php"],
+      "options": {
+        "tabWidth": 2,
+        "parser": "blade"
+      }
+    }
+  ]
+}

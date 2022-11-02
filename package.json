@@ -1,0 +1,7 @@
+{
+  "devDependencies": {
+    "@prettier/plugin-php": "^0.19.1",
+    "@shufo/prettier-plugin-blade": "^1.8.0",
+    "prettier": "^2.7.1"
+  }
+}
