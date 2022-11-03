@@ -9,7 +9,8 @@ return [
         'input' => Components\Forms\Inputs\Input::class,
         'checkbox' => Components\Forms\Inputs\Checkbox::class,
         'toggle' => Components\Forms\Inputs\Toggle::class,
-        'select' => Components\Forms\Inputs\Select::class
+        'select' => Components\Forms\Inputs\Select::class,
+        'filepond' => Components\Forms\Inputs\Filepond::class
     ],
 
     'prefix' => 'qazhboard-components'
