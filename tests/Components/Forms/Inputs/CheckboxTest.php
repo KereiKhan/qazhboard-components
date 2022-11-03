@@ -8,31 +8,42 @@ function template(string $attributes)
 }
 
 test('it can be rendered', function () {
-    $view = $this->blade(template('name="approve" label="Approve please!"'));
+    $template = <<<'HTML'
+                    <x-qazhboard-components-checkbox name="approve" label="Approve please!" />
+                HTML;
 
-    $view->assertSee('Approve please')
+    $this->blade($template)
+        ->assertSee('Approve please')
         ->assertSee('name="approve"', false)
         ->assertSee('id="approve"', false);
 });
 
 test('it id can be set', function () {
-    $view = $this->blade(template('id="approveID" name="approve" label="Approve please!"'));
-
-    $view->assertSee('Approve please')
+    $template = <<<'HTML'
+                    <x-qazhboard-components-checkbox id="approveID" name="approve" label="Approve please!" />
+                HTML;
+    $this->blade($template)
+        ->assertSee('Approve please')
         ->assertSee('name="approve"', false)
         ->assertSee('id="approveID"', false);
 });
 
 test('it name is required', function () {
+    $template = <<<'HTML'
+                    <x-qazhboard-components-checkbox id="approveID" label="Approve please!" />
+                HTML;
     $this->expectException(ViewException::class);
     $this->expectErrorMessage('string $name');
 
-    $this->blade(template('label="Approve please!"'));
+    $this->blade($template);
 });
 
 test('it label is required', function () {
+    $template = <<<'HTML'
+                    <x-qazhboard-components-checkbox id="approveID" name="approve" />
+                HTML;
     $this->expectException(ViewException::class);
     $this->expectErrorMessage('string $label');
 
-    $this->blade(template('name="approve"'));
+    $this->blade($template);
 });
