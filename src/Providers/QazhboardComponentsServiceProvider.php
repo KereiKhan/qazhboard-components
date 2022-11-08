@@ -5,7 +5,9 @@ declare(strict_types=1);
 namespace Khangrey\QazhboardComponents\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Str;
 use Illuminate\View\Compilers\BladeCompiler;
+use Khangrey\QazhboardComponents\QazhboardComponents;
 
 final class QazhboardComponentsServiceProvider extends ServiceProvider
 {
@@ -17,6 +19,7 @@ final class QazhboardComponentsServiceProvider extends ServiceProvider
 
     public function boot(): void
     {
+        $this->bootAssets();
         $this->bootResources();
         $this->bootBladeComponents();
         $this->bootPublishing();
@@ -35,6 +38,14 @@ final class QazhboardComponentsServiceProvider extends ServiceProvider
             foreach (config('qazhboard-components.components', []) as $alias => $component) {
                 $blade->component($alias, $component, $prefix);
             }
+
+            $blade->directive('qcStyles', function () {
+                return QazhboardComponents::outputStyles();
+            });
+
+            $blade->directive('qcScripts', function () {
+                return QazhboardComponents::outputScripts();
+            });
         });
     }
 
@@ -49,5 +60,22 @@ final class QazhboardComponentsServiceProvider extends ServiceProvider
                 __DIR__.'/../resources/views' => $this->app->resourcePath('views/vendor/qazhboard-components'),
             ], 'qazhboard-components-views');
         }
+    }
+
+    protected function bootAssets()
+    {
+        $assets = config('qazhboard-components.assets', []);
+
+        collect($assets)->filter(function (string $file) {
+            return Str::endsWith($file, '.css');
+        })->each(function (string $style) {
+            QazhboardComponents::addStyle($style);
+        });
+
+        collect($assets)->filter(function (string $file) {
+            return Str::endsWith($file, '.js');
+        })->each(function (string $script) {
+            QazhboardComponents::addScript($script);
+        });
     }
 }
