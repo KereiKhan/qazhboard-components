@@ -2,7 +2,7 @@
     <p class="text-base text-gray-800 dark:text-white mb-2.5">
         Checkbox list [Languages]
     </p>
-    <textarea name="{{ $name }}" id="{{ $id }}"></textarea>
+    <textarea class="hidden" name="{{ $name }}" id="{{ $id }}"></textarea>
     <div id="editor"></div>
 </div>
 
