@@ -15,7 +15,7 @@ function items(): array
         [
             'title'   => 'Push notification',
             'checked' => true,
-        ]
+        ],
     ];
 }
 
