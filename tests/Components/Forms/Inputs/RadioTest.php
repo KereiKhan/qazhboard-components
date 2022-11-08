@@ -2,19 +2,19 @@
 
 use Illuminate\View\ViewException;
 
-function items()
+function items(): array
 {
     return [
         [
             'title'   => 'Email',
-            'checked' => false
+            'checked' => false,
         ],
         [
             'title' => 'Phone',
         ],
         [
             'title'   => 'Push notification',
-            'checked' => true
+            'checked' => true,
         ]
     ];
 }

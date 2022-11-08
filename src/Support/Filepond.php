@@ -18,6 +18,7 @@ class Filepond
         if ($ok && $image_path) {
             $this->deleteOptimizedImage($image_path);
         }
+
         return $driver->url($this->generatePath().$file_name);
     }
 }

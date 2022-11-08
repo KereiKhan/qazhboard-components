@@ -41,12 +41,14 @@ trait UploadFiles
     {
         $parsed = parse_url($file_path);
         $file_path = $parsed['path'];
+
         return $this->deleteStorageWord($file_path);
     }
 
     public function deleteFile(string $file_path, string $disk = null): bool
     {
         $file_path = $this->cleanFilePath($file_path);
+
         return $this->driver($disk)->exists($file_path) &&
             $this->driver($disk)->delete($file_path);
     }
@@ -56,6 +58,7 @@ trait UploadFiles
         if (str_contains($file_path, 'storage')) {
             $file_path = str_replace('storage', '', $file_path);
         }
+
         return $file_path;
     }
 
@@ -118,6 +121,7 @@ trait UploadFiles
                     $constraint->aspectRatio();
                 })
                 ->save($file_path);
+
             return [
                 new UploadedFile(
                     $file_path,

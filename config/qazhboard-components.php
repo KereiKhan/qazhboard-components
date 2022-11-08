@@ -23,5 +23,5 @@ return [
         'https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.3.0/alpine-ie11.js',
         'https://unpkg.com/filepond@^4/dist/filepond.js',
         'https://cdn.quilljs.com/1.3.6/quill.js',
-    ]
+    ],
 ];
