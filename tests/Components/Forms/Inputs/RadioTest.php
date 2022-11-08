@@ -33,7 +33,7 @@ test('it id can be rendered', function () {
             HTML;
     $this->blade($template)
         ->assertSee('name="radio"', false)
-        ->assertSee('id="output-content"', false)
+        ->assertSee('id="output-content[Email]"', false)
         ->assertSee('Radio buttons');
 });
 
@@ -67,7 +67,7 @@ test('it label is required', function () {
 
 test('it items is required', function () {
     $this->expectException(ViewException::class);
-    $this->expectErrorMessage('Illuminate\Support\Collection|array $items');
+    $this->expectErrorMessage('array $items');
     $template = <<<'HTML'
             <x-qazhboard-components-radio name="radio" label="Radio buttons" />
             HTML;

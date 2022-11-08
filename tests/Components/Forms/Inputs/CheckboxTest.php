@@ -2,11 +2,6 @@
 
 use Illuminate\View\ViewException;
 
-function template(string $attributes)
-{
-    return '<x-qazhboard-components-checkbox '.$attributes.' />';
-}
-
 test('it can be rendered', function () {
     $template = <<<'HTML'
                     <x-qazhboard-components-checkbox name="approve" label="Approve please!" />
