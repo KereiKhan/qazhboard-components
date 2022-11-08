@@ -1,6 +1,6 @@
 <div>
     <p class="text-base text-gray-800 dark:text-white mb-2.5">
-        Checkbox list [Languages]
+        {{ $label }}
     </p>
     <textarea class="hidden" name="{{ $name }}" id="{{ $id }}"></textarea>
     <div id="editor"></div>
