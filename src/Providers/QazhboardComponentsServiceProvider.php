@@ -14,7 +14,7 @@ final class QazhboardComponentsServiceProvider extends ServiceProvider
     public function register(): void
     {
         $this->mergeConfigFrom(
-            __DIR__ . '/../../config/qazhboard-components.php',
+            __DIR__.'/../../config/qazhboard-components.php',
             'qazhboard-components'
         );
     }
@@ -30,7 +30,7 @@ final class QazhboardComponentsServiceProvider extends ServiceProvider
     protected function bootResources(): void
     {
         $this->loadViewsFrom(
-            __DIR__ . '/../../resources/views',
+            __DIR__.'/../../resources/views',
             'qazhboard-components'
         );
     }
@@ -64,19 +64,19 @@ final class QazhboardComponentsServiceProvider extends ServiceProvider
         if ($this->app->runningInConsole()) {
             $this->publishes(
                 [
-                    __DIR__ .
+                    __DIR__.
                     '/../../config/qazhboard-components.php' => $this->app->configPath(
                         'qazhboard-components.php'
-                    )
+                    ),
                 ],
                 'qazhboard-components-config'
             );
 
             $this->publishes(
                 [
-                    __DIR__ . '/../resources/views' => $this->app->resourcePath(
+                    __DIR__.'/../resources/views' => $this->app->resourcePath(
                         'views/vendor/qazhboard-components'
-                    )
+                    ),
                 ],
                 'qazhboard-components-views'
             );

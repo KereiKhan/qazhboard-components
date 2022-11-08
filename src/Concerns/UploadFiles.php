@@ -20,7 +20,7 @@ trait UploadFiles
         'video/x-ms-wmv',
         'video/x-flv',
         'video/3gpp',
-        'video/3gpp2'
+        'video/3gpp2',
     ];
 
     /** @var array|string[] */
@@ -41,12 +41,14 @@ trait UploadFiles
     {
         $parsed = parse_url($file_path);
         $file_path = $parsed['path'];
+
         return $this->deleteStorageWord($file_path);
     }
 
     public function deleteFile(string $file_path, string $disk = null): bool
     {
         $file_path = $this->cleanFilePath($file_path);
+
         return $this->driver($disk)->exists($file_path) &&
             $this->driver($disk)->delete($file_path);
     }
@@ -56,6 +58,7 @@ trait UploadFiles
         if (str_contains($file_path, 'storage')) {
             $file_path = str_replace('storage', '', $file_path);
         }
+
         return $file_path;
     }
 
@@ -72,15 +75,15 @@ trait UploadFiles
     public function getExtension(UploadedFile|Image $file): string
     {
         if ($file instanceof Image) {
-            return '.' . $file->extension;
+            return '.'.$file->extension;
         }
 
-        return '.' . $file->getClientOriginalExtension();
+        return '.'.$file->getClientOriginalExtension();
     }
 
     public function generatePath(): string
     {
-        return date('Y/m/d', time()) . '/';
+        return date('Y/m/d', time()).'/';
     }
 
     public function generateHash(): string
@@ -111,20 +114,21 @@ trait UploadFiles
     public function optimizeImage(UploadedFile $file): array
     {
         if ($this->isImage($file)) {
-            $path = 'images/' . time() . '_' . $file->getClientOriginalName();
+            $path = 'images/'.time().'_'.$file->getClientOriginalName();
             $file_path = $this->getStoragePath($path);
             Image::make($file->getRealPath())
                 ->resize(270, 160, function ($constraint) {
                     $constraint->aspectRatio();
                 })
                 ->save($file_path);
+
             return [
                 new UploadedFile(
                     $file_path,
-                    time() . '_' . $file->getClientOriginalName()
+                    time().'_'.$file->getClientOriginalName()
                 ),
                 true,
-                $path
+                $path,
             ];
         }
 

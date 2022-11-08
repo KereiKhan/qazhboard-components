@@ -4,14 +4,13 @@ use Illuminate\View\ViewException;
 
 function template(string $attributes)
 {
-    return '<x-qazhboard-components-filepond ' . $attributes . ' />';
+    return '<x-qazhboard-components-filepond '.$attributes.' />';
 }
 
 test('it can be rendered', function () {
     $template = <<<'HTML'
                     <x-qazhboard-components-filepond name="filepond" upload-url="https://example.com" />
                 HTML;
-
 
     $this->blade($template)
         ->assertSee('name="filepond"', false)

@@ -2,7 +2,6 @@
 
 namespace KereiKhan\QazhboardComponents\Components\Forms\Inputs;
 
-use Illuminate\Support\Collection;
 use Illuminate\View\View;
 
 class Radio extends \KereiKhan\QazhboardComponents\Components\QazhboardComponent
