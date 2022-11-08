@@ -14,10 +14,12 @@ class Select extends QazhboardComponent
     public string $emptyOptionsMessage;
     public ?string $id;
     public string $items;
+    public string $selectedItem;
 
     public function __construct(
         string $items,
         string $name,
+        string $selectedItem = '',
         string $placeholder = 'Select option',
         string $emptyOptionsMessage = 'No options match your search.',
         string $id = null
@@ -27,6 +29,7 @@ class Select extends QazhboardComponent
         $this->emptyOptionsMessage = $emptyOptionsMessage;
         $this->id = $id ?: $name;
         $this->items = $items;
+        $this->selectedItem = $selectedItem;
     }
 
     public function render(): View
