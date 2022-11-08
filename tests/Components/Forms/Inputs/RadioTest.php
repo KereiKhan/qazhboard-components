@@ -6,14 +6,14 @@ function items()
 {
     return [
         [
-            'title' => 'Email',
+            'title'   => 'Email',
             'checked' => false
         ],
         [
             'title' => 'Phone',
         ],
         [
-            'title' => 'Push notification',
+            'title'   => 'Push notification',
             'checked' => true
         ]
     ];

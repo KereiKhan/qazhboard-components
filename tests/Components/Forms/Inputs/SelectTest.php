@@ -7,7 +7,7 @@ function data()
     return collect([
         'en' => 'English',
         'ru' => 'Russian',
-        'kk' => 'Kazakh'
+        'kk' => 'Kazakh',
     ])->toJson();
 }
 

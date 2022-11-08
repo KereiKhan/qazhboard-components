@@ -2,10 +2,10 @@
 
 namespace KereiKhan\QazhboardComponents\Components\Forms\Inputs;
 
-use Illuminate\Support\Collection;
 use Illuminate\View\View;
+use KereiKhan\QazhboardComponents\Components\QazhboardComponent;
 
-class Radio extends \KereiKhan\QazhboardComponents\Components\QazhboardComponent
+class Radio extends QazhboardComponent
 {
     public string $label;
     public array $items;
