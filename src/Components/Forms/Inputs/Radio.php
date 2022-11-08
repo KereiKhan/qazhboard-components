@@ -1,11 +1,11 @@
 <?php
 
-namespace Khangrey\QazhboardComponents\Components\Forms\Inputs;
+namespace KereiKhan\QazhboardComponents\Components\Forms\Inputs;
 
 use Illuminate\Support\Collection;
 use Illuminate\View\View;
 
-class Radio extends \Khangrey\QazhboardComponents\Components\QazhboardComponent
+class Radio extends \KereiKhan\QazhboardComponents\Components\QazhboardComponent
 {
     public string $label;
     public array $items;

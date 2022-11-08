@@ -1,5 +1,5 @@
 {
-  "name": "khangrey/qazhboard-components",
+  "name": "kereikhan/qazhboard-components",
   "description": "Form fields for the Laravel framework.",
   "type": "library",
   "license": "MIT",
@@ -7,18 +7,18 @@
     {
       "role": "Developer",
       "name": "Daulerkerey Dulat",
-      "email": "khan.grey.dev@gmail.com",
-      "homepage": "https://github.com/khangrey"
+      "email": "kerei.khan@gmail.com",
+      "homepage": "https://github.com/KereiKhan"
     }
   ],
   "autoload": {
     "psr-4": {
-      "Khangrey\\QazhboardComponents\\": "src/"
+      "KereiKhan\\QazhboardComponents\\": "src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "Khangrey\\QazhboardComponents\\Tests\\": "tests/"
+      "KereiKhan\\QazhboardComponents\\Tests\\": "tests/"
     }
   },
   "require": {

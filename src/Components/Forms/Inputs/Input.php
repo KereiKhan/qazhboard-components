@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Khangrey\QazhboardComponents\Components\Forms\Inputs;
+namespace KereiKhan\QazhboardComponents\Components\Forms\Inputs;
 
 use Illuminate\View\View;
-use Khangrey\QazhboardComponents\Components\QazhboardComponent;
+use KereiKhan\QazhboardComponents\Components\QazhboardComponent;
 
 class Input extends QazhboardComponent
 {
@@ -25,9 +25,12 @@ class Input extends QazhboardComponent
     public string $label;
 
     public function __construct(
-        string $name, string $label, string $id = null, string $type = 'text', ?string $value = ''
-    )
-    {
+        string $name,
+        string $label,
+        string $id = null,
+        string $type = 'text',
+        ?string $value = ''
+    ) {
         $this->name = $name;
         $this->id = $id ?? $name;
         $this->type = $type;

@@ -1,10 +1,10 @@
 <?php
 
-namespace Khangrey\QazhboardComponents\Components\Forms;
+namespace KereiKhan\QazhboardComponents\Components\Forms;
 
 use Illuminate\Support\ViewErrorBag;
 use Illuminate\View\View;
-use Khangrey\QazhboardComponents\Components\QazhboardComponent;
+use KereiKhan\QazhboardComponents\Components\QazhboardComponent;
 
 class Error extends QazhboardComponent
 {

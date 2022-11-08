@@ -1,6 +1,6 @@
 <?php
 
-namespace Khangrey\QazhboardComponents;
+namespace KereiKhan\QazhboardComponents;
 
 class QazhboardComponents
 {
@@ -12,7 +12,7 @@ class QazhboardComponents
 
     public static function addStyle(string $style): void
     {
-        if (! in_array($style, static::$styles)) {
+        if (!in_array($style, static::$styles)) {
             static::$styles[] = $style;
         }
     }
@@ -24,14 +24,16 @@ class QazhboardComponents
 
     public static function outputStyles(): string
     {
-        return collect(static::$styles)->map(function (string $style) {
-            return '<link href="'.$style.'" rel="stylesheet" />';
-        })->implode(PHP_EOL);
+        return collect(static::$styles)
+            ->map(function (string $style) {
+                return '<link href="' . $style . '" rel="stylesheet" />';
+            })
+            ->implode(PHP_EOL);
     }
 
     public static function addScript(string $script): void
     {
-        if (! in_array($script, static::$scripts)) {
+        if (!in_array($script, static::$scripts)) {
             static::$scripts[] = $script;
         }
     }
@@ -43,8 +45,10 @@ class QazhboardComponents
 
     public static function outputScripts(): string
     {
-        return collect(static::$scripts)->map(function (string $script) {
-            return '<script src="'.$script.'"></script>';
-        })->implode(PHP_EOL);
+        return collect(static::$scripts)
+            ->map(function (string $script) {
+                return '<script src="' . $script . '"></script>';
+            })
+            ->implode(PHP_EOL);
     }
 }

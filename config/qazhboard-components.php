@@ -1,6 +1,6 @@
 <?php
 
-use Khangrey\QazhboardComponents\Components;
+use KereiKhan\QazhboardComponents\Components;
 
 return [
     'components' => [
@@ -12,7 +12,7 @@ return [
         'select' => Components\Forms\Inputs\Select::class,
         'filepond' => Components\Forms\Inputs\Filepond::class,
         'radio' => Components\Forms\Inputs\Radio::class,
-        'quill-editor' => Components\Forms\Inputs\QuillEditor::class,
+        'quill-editor' => Components\Forms\Inputs\QuillEditor::class
     ],
 
     'prefix' => 'qazhboard-components',

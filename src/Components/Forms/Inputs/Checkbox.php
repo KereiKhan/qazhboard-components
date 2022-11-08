@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Khangrey\QazhboardComponents\Components\Forms\Inputs;
+namespace KereiKhan\QazhboardComponents\Components\Forms\Inputs;
 
 use Illuminate\View\View;
-use Khangrey\QazhboardComponents\Components\QazhboardComponent;
+use KereiKhan\QazhboardComponents\Components\QazhboardComponent;
 
 class Checkbox extends QazhboardComponent
 {
@@ -21,8 +21,7 @@ class Checkbox extends QazhboardComponent
         string $id = null,
         string $title = null,
         bool $checked = false
-    )
-    {
+    ) {
         $this->name = $name;
         $this->id = $id ?: $name;
         $this->label = $label;

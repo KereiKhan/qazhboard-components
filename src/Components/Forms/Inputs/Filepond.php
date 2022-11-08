@@ -1,9 +1,9 @@
 <?php
 
-namespace Khangrey\QazhboardComponents\Components\Forms\Inputs;
+namespace KereiKhan\QazhboardComponents\Components\Forms\Inputs;
 
 use Illuminate\View\View;
-use Khangrey\QazhboardComponents\Components\QazhboardComponent;
+use KereiKhan\QazhboardComponents\Components\QazhboardComponent;
 
 class Filepond extends QazhboardComponent
 {

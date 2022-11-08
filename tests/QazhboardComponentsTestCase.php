@@ -1,8 +1,8 @@
 <?php
 
-namespace Khangrey\QazhboardComponents\Tests;
+namespace KereiKhan\QazhboardComponents\Tests;
 
-use Khangrey\QazhboardComponents\Providers\QazhboardComponentsServiceProvider;
+use KereiKhan\QazhboardComponents\Providers\QazhboardComponentsServiceProvider;
 use Orchestra\Testbench\TestCase;
 
 class QazhboardComponentsTestCase extends TestCase

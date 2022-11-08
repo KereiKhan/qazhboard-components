@@ -1,9 +1,9 @@
 <?php
 
-namespace Khangrey\QazhboardComponents\Support;
+namespace KereiKhan\QazhboardComponents\Support;
 
 use Illuminate\Http\UploadedFile;
-use Khangrey\QazhboardComponents\Concerns\UploadFiles;
+use KereiKhan\QazhboardComponents\Concerns\UploadFiles;
 
 class Filepond
 {

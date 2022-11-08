@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Khangrey\QazhboardComponents\Components;
+namespace KereiKhan\QazhboardComponents\Components;
 
 use Illuminate\View\Component;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Khangrey\QazhboardComponents\Concerns;
+namespace KereiKhan\QazhboardComponents\Concerns;
 
 use Illuminate\Contracts\Filesystem\Filesystem;
 use Illuminate\Http\UploadedFile;

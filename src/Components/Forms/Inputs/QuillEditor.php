@@ -1,9 +1,9 @@
 <?php
 
-namespace Khangrey\QazhboardComponents\Components\Forms\Inputs;
+namespace KereiKhan\QazhboardComponents\Components\Forms\Inputs;
 
 use Illuminate\View\View;
-use Khangrey\QazhboardComponents\Components\QazhboardComponent;
+use KereiKhan\QazhboardComponents\Components\QazhboardComponent;
 
 class QuillEditor extends QazhboardComponent
 {
@@ -26,6 +26,8 @@ class QuillEditor extends QazhboardComponent
 
     public function render(): View
     {
-        return view('qazhboard-components::components.forms.inputs.quill-editor');
+        return view(
+            'qazhboard-components::components.forms.inputs.quill-editor'
+        );
     }
 }

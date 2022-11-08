@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Khangrey\QazhboardComponents\Components\Forms;
+namespace KereiKhan\QazhboardComponents\Components\Forms;
 
 use Illuminate\View\View;
-use Khangrey\QazhboardComponents\Components\QazhboardComponent;
+use KereiKhan\QazhboardComponents\Components\QazhboardComponent;
 
 class Form extends QazhboardComponent
 {
@@ -19,9 +19,10 @@ class Form extends QazhboardComponent
     public bool $hasFiles;
 
     public function __construct(
-        string $action = null, string $method = 'POST', bool $hasFiles = false
-    )
-    {
+        string $action = null,
+        string $method = 'POST',
+        bool $hasFiles = false
+    ) {
         $this->action = $action;
         $this->method = $method;
         $this->hasFiles = $hasFiles;

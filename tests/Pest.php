@@ -12,6 +12,8 @@
 */
 
 use Illuminate\Foundation\Testing\Concerns\InteractsWithViews;
-use Khangrey\QazhboardComponents\Tests\QazhboardComponentsTestCase;
+use KereiKhan\QazhboardComponents\Tests\QazhboardComponentsTestCase;
 
-uses(QazhboardComponentsTestCase::class, InteractsWithViews::class)->in(__DIR__);
+uses(QazhboardComponentsTestCase::class, InteractsWithViews::class)->in(
+    __DIR__
+);
